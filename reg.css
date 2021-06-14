@@ -1,0 +1,316 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  body{
+    font-family: montserrat;
+  }
+  nav{
+    background: #1c00b5;
+    height: 80px;
+    width: 100%;
+  }
+  label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+  }
+  nav ul{
+    float: left;
+    margin-left: 20px;
+  }
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+  nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  a.active,a:hover{
+    background: #1b9bff;
+    transition: .5s;
+  }
+  .checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check{
+    display: none;
+  }
+  @media (max-width: 952px){
+    label.logo{
+      font-size: 30px;
+      padding-left: 50px;
+    }
+    nav ul li a{
+      font-size: 16px;
+    }
+  }
+  @media (max-width: 858px){
+    .checkbtn{
+      display: block;
+    }
+    ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #2c3e50;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+    }
+    nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+    nav ul li a{
+      font-size: 20px;
+    }
+    a:hover,a.active{
+      background: none;
+      color: #0082e6;
+    }
+    #check:checked ~ ul{
+      left: 0;
+    }
+  }
+  section{
+    background: url(img.jpg) no-repeat;
+    background-size:auto;
+    height: calc(100vh - 80px);
+  }
+
+
+
+
+  /* body */
+
+
+  .wrapper {
+    max-width: 60rem;
+    width: 100%;
+    background: #fff;
+    margin: 2rem auto;
+    box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.125);
+    padding: 3rem;
+    box-shadow: 1rem 1rem 2rem black;
+  }
+  
+  .wrapper .title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    color: #1c00b5;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  .wrapper .form {
+    width: 100%;
+  }
+  
+  .wrapper .form .inputfield {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+  .button_div {
+    width: 60rem;
+    grid-auto-rows: auto;
+    align-content: stretch;
+    align-items: center;
+    padding: rem;
+  }
+  .btn {
+    width: 16rem;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-left: 1.5rem;
+    height: 3rem;
+    background-color: #1c00b5;
+    border: none;
+  }
+  
+  .wrapper .form .inputfield label {
+    width: 20rem;
+    color: black;
+    margin-right: 1rem;
+    font-size: 1rem;
+  }
+  
+  .wrapper .form .inputfield .input,
+  .wrapper .form .inputfield .textarea {
+    width: 100%;
+    outline: none;
+    border: 0.1rem solid #b7b9b8;
+    font-size: 1.5rem;
+    padding: 0.8rem 1rem;
+    border-radius: 0.3rem;
+    transition: all 0.3s ease;
+  }
+  
+  .wrapper .form .inputfield .textarea {
+    width: 100%;
+    height: 12.5rem;
+    resize: none;
+  }
+  
+  .wrapper .form .inputfield .custom_select {
+    position: relative;
+    width: 100%;
+    height: 3.7rem;
+  }
+  
+  .wrapper .form .inputfield .custom_select:before {
+    content: "";
+    position: absolute;
+    top: 1.2rem;
+    right: 1rem;
+    border: 0.8rem solid;
+    border-color: #d5dbd9 transparent transparent transparent;
+    pointer-events: none;
+  }
+  
+  .wrapper .form .inputfield .custom_select select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    border: 0rem;
+    padding: 0.8rem 1rem;
+    font-size: 1.5rem;
+    border: 0.1rem solid #d5dbd9;
+    border-radius: 0.3rem;
+  }
+  
+  .wrapper .form .inputfield .input:focus,
+  .wrapper .form .inputfield .textarea:focus,
+  .wrapper .form .inputfield .custom_select select:focus {
+    border: 0.1rem solid #fec107;
+  }
+  
+  .wrapper .form .inputfield p {
+    font-size: 1.4rem;
+    color: #757575;
+  }
+  .wrapper .form .inputfield .check {
+    width: 1.5rem;
+    height: 1.5rem;
+    position: relative;
+    display: block;
+    cursor: pointer;
+  }
+  .wrapper .form .inputfield .check input[type="checkbox"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  .wrapper .form .inputfield .check .checkmark {
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 0.1rem solid #fec107;
+    display: block;
+    position: relative;
+  }
+  .wrapper .form .inputfield .check .checkmark:before {
+    content: "";
+    position: absolute;
+    top: 0.1rem;
+    left: 0.2rem;
+    width: 0.5rem;
+    height: 0.2rem;
+    border: 0.2rem solid;
+    border-color: transparent transparent #fff #fff;
+    transform: rotate(-45deg);
+    display: none;
+  }
+  .wrapper .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark {
+    background: #fec107;
+  }
+  
+  .wrapper
+    .form
+    .inputfield
+    .check
+    input[type="checkbox"]:checked
+    ~ .checkmark:before {
+    display: block;
+  }
+  
+  .wrapper .form .inputfield .btn {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    font-size: 1.5rem;
+    border: 0rem;
+    background: #fec107;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    outline: none;
+  }
+  
+  .wrapper .form .inputfield .btn:hover {
+    background: #ffd658;
+  }
+  
+  .wrapper .form .inputfield:last-child {
+    margin-bottom: 0;
+  }
+  
+  @media (max-width: 42rem) {
+    .wrapper .form .inputfield {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .wrapper .form .inputfield label {
+      margin-bottom: 0.5rem;
+    }
+    .wrapper .form .inputfield.terms {
+      flex-direction: row;
+    }
+  }
+  table {
+    border-collapse: collapse;
+    width: 90%;
+  
+    margin-left: 8rem;
+  }
+  
+  table,
+  th,
+  td {
+    border: 0.2rem solid black;
+    padding: 0.1rem;
+  }
+  
+  th {
+    font-weight: 800;
+    height: 4rem;
+    background-color: #1c00b5;
+    color: white;
+  }
